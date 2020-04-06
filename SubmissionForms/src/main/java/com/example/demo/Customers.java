@@ -1,34 +1,43 @@
 package com.example.demo;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Customers {
+    @Id
     private int cid;
-    private int cname;
-    private int email;
+    private String cname;
+    private String cemail;
 
-	public int getCid() {
-		return this.cid;
+    @Override
+	public String toString() {
+		return "CourseWebAppApplication [cid=" + cid + ", cname=" + cname + ", cemail=" + cemail + "]";
 	}
 
-	public void setCid(int cid) {
-		this.cid = cid;
-	}
+    public int getCid() {
+        return this.cid;
+    }
 
-	public int getCname() {
-		return this.cname;
-	}
+    public void setCid(int cid) {
+        this.cid = cid;
+    }
 
-	public void setCname(int cname) {
-		this.cname = cname;
-	}
+    public String getCname() {
+        return this.cname;
+    }
 
-	public int getEmail() {
-		return this.email;
-	}
+    public void setCname(String cname) {
+        this.cname = cname;
+    }
 
-	public void setEmail(int email) {
-		this.email = email;
-	}
+    public String getCemail() {
+        return this.cemail;
+    }
 
-    
+    public void setCemail(String cemail) {
+        this.cemail = cemail;
+    }
+
 
 }
